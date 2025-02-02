@@ -38,7 +38,7 @@ A modern, responsive portfolio website built with Next.js 14, TypeScript, and Ta
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/arwin-swapna/minimal.git
+git clone https://github.com/arwin-swapna/minimal-portfolio.git
 ```
 
 2. Install dependencies:
