@@ -43,7 +43,7 @@ function MainNav() {
         Contact
       </button>
       <Link
-        href="https://github.com/arwin-swapna/arwin-swapna/raw/main/1728157187.pdf"
+        href="https://github.com/arwin-swapna/arwin-swapna/blob/main/1728157187.pdf"
         target="_blank"
         rel="noopener noreferrer"
         className="hover:opacity-80"
