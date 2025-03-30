@@ -79,10 +79,10 @@ export const projects: Project[] = [
 export const experiences: Experience[] = [
   {
     company: "White & Case LLP",
-    position: "DMS & Risk Engineer",
+    position: "DMS and Risk Systems Engineer",
     date: "March 2025 – Present",
     location: "Tampa, FL",
-    technologies: ["iManage", "SharePoint", "MS SQL", "Azure"],
+    technologies: ["iManage", "Intapp", "MS-SQL Server", "Azure", "Python"],
   },
   {
     company: "Tenex Software Solutions",
