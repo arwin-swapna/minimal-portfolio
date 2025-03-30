@@ -87,9 +87,9 @@ export const experiences: Experience[] = [
   {
     company: "Tenex Software Solutions",
     position: "Software Engineer",
-    date: "Jul 2024 – Present",
+    date: "Jul 2024 – March 2025",
     location: "Tampa, FL",
-    technologies: ["Blazor", "Golang", "AWS", "VB.NET", "MySQL"],
+    technologies: ["Blazor", "Golang", "AWS", "VB.NET", "C#", "MySQL"],
   },
   {
     company: "White & Case LLP",
