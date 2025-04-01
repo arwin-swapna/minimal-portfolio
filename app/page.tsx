@@ -15,7 +15,7 @@ export default function Home() {
           Arwin Arun Swapna
         </h1>
         <p className="text-base sm:text-lg md:text-2xl lg:text-3xl text-muted-foreground mb-8 whitespace-nowrap">
-          Software Engineer @ 10x | CS @ USF
+          Engineer @ White & Case | CS @ USF
         </p>
         <div className="flex items-center gap-4">
           <Link
