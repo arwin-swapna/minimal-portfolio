@@ -4,7 +4,7 @@ import "./globals.css";
 import { LayoutContent } from "./layout-client";
 import { StructuredData } from "@/components/structured-data";
 
-const baseUrl = "https://arwinswapna.netlify.app";
+const baseUrl = "https://portfolio.arunsar.dev/";
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
