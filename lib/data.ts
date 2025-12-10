@@ -36,8 +36,8 @@ export const projects: Project[] = [
   {
     title: "E-commerce Store",
     description:
-      "A full-stack e-commerce platform built with React, TypeScript, ASP.NET Web APIs, Entity Framework, and Postgres.",
-    technologies: ["React", "TypeScript", "C#", "ASP.NET", "Postgres"],
+      "A full-stack e-commerce platform built with Next.js, supabase and postgres.",
+    technologies: ["React", "TypeScript", "Next.js", "Supabase", "Postgres"],
     liveUrl: "https://invitecards.in",
   },
   {

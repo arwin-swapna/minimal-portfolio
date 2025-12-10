@@ -3,50 +3,38 @@
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ThemeToggle } from "@/components/theme-toggle";
-import { MobileMenu } from "@/components/mobile-menu";
 import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
+/**
+ * Main navigation component for desktop
+ * Only visible on md+ screens
+ */
 function MainNav() {
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  const navLinks = [
+    { label: "About", href: "#about" },
+    { label: "Experience", href: "#experience" },
+    { label: "Projects", href: "#projects" },
+    { label: "Contact", href: "#contact" },
+  ];
 
   return (
-    <div className="hidden md:flex items-center space-x-6">
-      <button
-        onClick={() => scrollToSection("about")}
-        className="hover:opacity-80"
-      >
-        About
-      </button>
-      <button
-        onClick={() => scrollToSection("experience")}
-        className="hover:opacity-80"
-      >
-        Experience
-      </button>
-      <button
-        onClick={() => scrollToSection("projects")}
-        className="hover:opacity-80"
-      >
-        Projects
-      </button>
-      <button
-        onClick={() => scrollToSection("contact")}
-        className="hover:opacity-80"
-      >
-        Contact
-      </button>
+    <div className="hidden md:flex items-center space-x-8">
+      {navLinks.map((link) => (
+        <Link
+          key={link.href}
+          href={link.href}
+          className="text-sm font-medium transition-opacity hover:opacity-60"
+        >
+          {link.label}
+        </Link>
+      ))}
       <Link
         href="https://github.com/arwin-swapna/arwin-swapna/blob/main/1728157187.pdf"
         target="_blank"
         rel="noopener noreferrer"
-        className="hover:opacity-80"
+        className="text-sm font-medium transition-opacity hover:opacity-60"
       >
         Resume
       </Link>
@@ -55,6 +43,9 @@ function MainNav() {
   );
 }
 
+/**
+ * Root layout component with theme provider and navigation
+ */
 export function LayoutContent({ children }: { children: React.ReactNode }) {
   return (
     <body className={`${inter.className} dark:bg-black`}>
@@ -64,19 +55,34 @@ export function LayoutContent({ children }: { children: React.ReactNode }) {
         enableSystem
         disableTransitionOnChange
       >
+        {/* Smooth scroll behavior and section margins */}
+        <style>{`
+          html {
+            scroll-behavior: smooth;
+          }
+          section {
+            scroll-margin-top: 100px;
+          }
+        `}</style>
+
         <div className="flex flex-col min-h-screen">
+          {/* Sticky header navigation */}
           <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-sm border-b border-border">
             <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
-              <button
-                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-                className="text-xl font-bold hover:opacity-80"
+              {/* Logo */}
+              <Link
+                href="#home"
+                className="text-xl font-bold hover:opacity-60 transition-opacity"
               >
                 arwin.dev
-              </button>
+              </Link>
+
+              {/* Desktop navigation */}
               <MainNav />
-              <MobileMenu />
             </nav>
           </header>
+
+          {/* Main content area */}
           <main className="flex-1">{children}</main>
         </div>
       </ThemeProvider>

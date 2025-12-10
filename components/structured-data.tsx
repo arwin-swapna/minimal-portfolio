@@ -6,13 +6,13 @@ export function StructuredData() {
     jobTitle: "Software Engineer",
     worksFor: {
       "@type": "Organization",
-      name: "Tenex Software Solutions",
+      name: "White & Case LLP",
     },
     alumniOf: {
       "@type": "CollegeOrUniversity",
       name: "University of South Florida",
     },
-    url: "https://arwinswapna.netlify.app",
+    url: "https://portfolio.arunsar.dev",
     sameAs: [
       "https://github.com/arwin-swapna",
       "https://linkedin.com/in/arwinswapna",
@@ -24,9 +24,9 @@ export function StructuredData() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "Arwin Arun Swapna Portfolio",
-    url: "https://arwinswapna.netlify.app",
+    url: "https://portfolio.arunsar.dev",
     description:
-      "Personal portfolio website of Arwin Arun Swapna, Software Engineer at Tenex Software Solutions",
+      "Personal portfolio website of Arwin Arun Swapna, Software Engineer at White & Case LLP",
   };
 
   return (
